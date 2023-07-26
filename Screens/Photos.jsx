@@ -12,8 +12,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectPhotosData, selectPhotosWithStatus } from "../redux/selectors";
 import { fetchPhotos } from "../redux/operations";
-import { toggleStatus } from "../redux/photosSlice";
-import { addToFavorite } from "../redux/favoriteSlice";
+import { addToFavorite, removeFromFavorite } from "../redux/favoriteSlice";
 
 
 const Photos = () => {
@@ -26,7 +25,9 @@ const Photos = () => {
   }, []);
 
   function handlePress(photoItem) {
-    dispatch(addToFavorite(photoItem));
+    photoItem.isLiked
+      ? dispatch(removeFromFavorite(photoItem.id))
+      : dispatch(addToFavorite(photoItem));
   }
 
   return (
