@@ -8,18 +8,6 @@ const photosSlice = createSlice({
     isLoading: false,
     error: null,
   },
-  reducers: {
-    toggleStatus(state, action) {
-      return {
-        ...state,
-        list: state.list.map((item) =>
-          item.id === action.payload
-            ? { ...item, isLiked: !item.isLiked }
-            : item
-        ),
-      };
-    },
-  },
   extraReducers: (builder) =>
     builder
       .addCase(fetchPhotos.pending, (state, action) => {
@@ -36,5 +24,4 @@ const photosSlice = createSlice({
       }),
 });
 
-export const { toggleStatus } = photosSlice.actions;
 export const photosReducer = photosSlice.reducer;

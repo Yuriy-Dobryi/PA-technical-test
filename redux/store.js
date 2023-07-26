@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
 import {
   FLUSH,
   REHYDRATE,
@@ -6,10 +6,10 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-} from 'redux-persist';
+} from "redux-persist";
 import storage from "@react-native-async-storage/async-storage";
-import persistStore from 'redux-persist/es/persistStore';
-import persistReducer from 'redux-persist/es/persistReducer';
+import persistStore from "redux-persist/es/persistStore";
+import persistReducer from "redux-persist/es/persistReducer";
 
 import { photosReducer } from "./photosSlice";
 import { filterReducer } from "./filterSlice";

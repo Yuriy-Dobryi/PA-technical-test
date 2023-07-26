@@ -1,8 +1,7 @@
 import "react-native-gesture-handler";
+import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
@@ -13,7 +12,7 @@ import Photos from "./Screens/Photos";
 import Favorites from './Screens/Favorites';
 
 const MainStack = createStackNavigator();
-// rgba(219, 189, 189, 1);
+
 export default function App() {
   return (
     <Provider store={store}>
@@ -38,15 +37,7 @@ export default function App() {
           </MainStack.Navigator>
         </NavigationContainer>
       </PersistGate>
+      <StatusBar style='auto' />
     </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
