@@ -10,17 +10,15 @@ const Home = () => {
   return (
     <Tabs.Navigator
       initialRouteName='Photos'
-      tabBarOptions={{
-        activeTintColor: "tomato",
-        inactiveTintColor: "gray",
-        showLabel: false,
-      }}
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, size }) => {
           const iconName =
             route.name === "Photos" ? "images" : "hand-holding-heart";
           return <FontAwesome5 name={iconName} size={size} color={color} />;
         },
+        tabBarActiveTintColor: "tomato",
+        tabBarInactiveTintColor: "gray",
+        tabBarShowLabel: false,
       })}
     >
       <Tabs.Screen name='Photos' component={Photos} />

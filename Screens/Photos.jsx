@@ -50,7 +50,7 @@ const Photos = () => {
                   >
                     <FontAwesome
                       name={item.isLiked ? "heart" : "heart-o"}
-                      size={"20"}
+                      size={20}
                       color={"green"}
                     />
                   </Pressable>

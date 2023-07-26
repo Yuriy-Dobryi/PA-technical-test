@@ -35,7 +35,7 @@ const Favorite = () => {
                 <View style={styles.infoWrapper}>
                   <Text style={styles.title}>{item.title}</Text>
                   <Pressable onPress={() => handlePress(item.id)}>
-                    <FontAwesome name={"heart"} size={"20"} color={"green"} />
+                    <FontAwesome name={"heart"} size={20} color={"green"} />
                   </Pressable>
                 </View>
               </View>
