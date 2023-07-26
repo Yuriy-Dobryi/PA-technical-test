@@ -6,7 +6,6 @@ import Favorites from "./Favorites";
 const Tabs = createBottomTabNavigator();
 
 const Home = () => {
-  console.log('hello');
   return (
       <Tabs.Navigator
         initialRouteName='Photos'
